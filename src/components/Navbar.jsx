@@ -23,9 +23,9 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-hala-blue/95 backdrop-blur-md shadow-lg border-b border-white/15 transition-all">
+    <header className="sticky top-0 z-50 bg-hala-blue/95 backdrop-blur-md shadow-md border-b border-white/15 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-14 sm:h-16">
 
           {/* Brand Logo */}
           <button
@@ -35,7 +35,7 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
             <img
               src="/logos/logo-white.svg"
               alt="Hala Business Service"
-              className="h-8 sm:h-9 w-auto object-contain"
+              className="h-7 sm:h-8 w-auto object-contain"
               onError={(e) => {
                 e.currentTarget.src = "/public/logos/logo-white.svg";
               }}
