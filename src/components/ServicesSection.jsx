@@ -90,16 +90,10 @@ export default function ServicesSection({ selectedCategory, setSelectedCategory,
                     </span>
                   </div>
 
-                  {/* Icon floating on bottom left of image */}
-                  <div className="absolute -bottom-4 left-5 z-10">
-                    <div className="w-11 h-11 rounded-xl bg-white text-hala-blue flex items-center justify-center shadow-lg border border-slate-100 group-hover:bg-hala-blue group-hover:text-white transition-colors">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Card Content Body */}
-                <div className="p-6 pt-7 flex-1 flex flex-col justify-between">
+                <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Category Label */}
                     <div className="text-[11px] font-bold text-hala-blue uppercase tracking-wider mb-1">
