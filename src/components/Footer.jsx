@@ -70,12 +70,12 @@ export default function Footer({ onNavigate }) {
             <div className="space-y-2.5 text-xs sm:text-sm text-slate-100">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
-                <span>Office 217, Mozna Building, Al Nahda, Dubai, UAE</span>
+                <span>Office 000, Building Name, Area, Dubai, UAE</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-white flex-shrink-0" />
                 <a href="tel:+97142230028" className="hover:underline font-semibold text-white">
-                  +971 4 223 0028
+                  +971 00 000 0000
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ export default function Footer({ onNavigate }) {
                   rel="noopener noreferrer"
                   className="hover:underline font-semibold text-white"
                 >
-                  +971 55 127 2700
+                  +971 00 000 0000
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -98,13 +98,10 @@ export default function Footer({ onNavigate }) {
                   info@haladubai.ae
                 </a>
               </div>
-
-
             </div>
           </div>
 
         </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-200">
           <div>
