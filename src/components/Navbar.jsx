@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown, MessageSquare, PhoneCall, Sparkles, Shield, Calculator, Crown } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Shield, Calculator, Crown } from 'lucide-react';
 
 export default function Navbar({ activePage, setActivePage, setSelectedCategory }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,10 +54,11 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
                   >
                     <button
                       onClick={() => handleNavClick('services', 'all')}
-                      className={`inline-flex items-center gap-1.5 font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${activePage === 'services'
+                      className={`inline-flex items-center gap-1.5 font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${
+                        activePage === 'services'
                           ? 'bg-white text-hala-blue font-bold'
                           : 'text-white/90 hover:text-white hover:bg-white/10'
-                        }`}
+                      }`}
                     >
                       <span>{link.label}</span>
                       <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
@@ -116,10 +117,11 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
                 ) : (
                   <button
                     onClick={() => handleNavClick(link.id)}
-                    className={`font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${activePage === link.id
+                    className={`font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${
+                      activePage === link.id
                         ? 'bg-white text-hala-blue font-bold'
                         : 'text-white/90 hover:text-white hover:bg-white/10'
-                      }`}
+                    }`}
                   >
                     {link.label}
                   </button>
@@ -128,30 +130,8 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
             ))}
           </nav>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="https://wa.me/971551272700?text=Hello%20Hala%20Business%20Service,%20I%20would%20like%20a%20consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-white hover:bg-slate-100 text-hala-blue font-extrabold text-xs xl:text-sm px-5 py-2.5 rounded-full transition-colors"
-            >
-              <MessageSquare className="w-4 h-4 text-hala-blue" />
-              <span>Chat on WhatsApp</span>
-            </a>
-          </div>
-
           {/* Mobile Hamburger Toggle */}
-          <div className="lg:hidden flex items-center gap-2">
-            <a
-              href="https://wa.me/971551272700"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-hala-blue p-2 rounded-full shadow"
-              aria-label="WhatsApp"
-            >
-              <MessageSquare className="w-5 h-5 text-hala-blue" />
-            </a>
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-white p-2 focus:outline-none rounded-lg hover:bg-white/10"
@@ -171,23 +151,13 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
             <button
               key={link.id}
               onClick={() => handleNavClick(link.id, link.id === 'services' ? 'all' : null)}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${activePage === link.id ? 'bg-white text-hala-blue font-bold shadow' : 'text-slate-100 hover:bg-white/10'
-                }`}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                activePage === link.id ? 'bg-white text-hala-blue font-bold shadow' : 'text-slate-100 hover:bg-white/10'
+              }`}
             >
               {link.label}
             </button>
           ))}
-
-          <div className="pt-4 flex flex-col gap-2.5">
-            <a
-              href="https://wa.me/971551272700"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center gap-2 bg-white text-hala-blue font-bold py-3 rounded-full shadow"
-            >
-              <MessageSquare className="w-5 h-5 text-hala-blue" /> Chat on WhatsApp
-            </a>
-          </div>
         </div>
       )}
     </header>
