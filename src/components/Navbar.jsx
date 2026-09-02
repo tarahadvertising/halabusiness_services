@@ -54,10 +54,10 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
                   >
                     <button
                       onClick={() => handleNavClick('services', 'all')}
-                      className={`inline-flex items-center gap-1.5 font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${
+                      className={`inline-flex items-center gap-1.5 font-semibold text-xs xl:text-sm px-3.5 py-2 transition-colors relative ${
                         activePage === 'services'
-                          ? 'bg-white text-hala-blue font-bold'
-                          : 'text-white/90 hover:text-white hover:bg-white/10'
+                          ? 'text-white font-extrabold border-b-2 border-white pb-1'
+                          : 'text-white/80 hover:text-white hover:bg-white/10 rounded-full'
                       }`}
                     >
                       <span>{link.label}</span>
@@ -117,10 +117,10 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
                 ) : (
                   <button
                     onClick={() => handleNavClick(link.id)}
-                    className={`font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-full transition-colors ${
+                    className={`font-semibold text-xs xl:text-sm px-3.5 py-2 transition-colors relative ${
                       activePage === link.id
-                        ? 'bg-white text-hala-blue font-bold'
-                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                        ? 'text-white font-extrabold border-b-2 border-white pb-1'
+                        : 'text-white/80 hover:text-white hover:bg-white/10 rounded-full'
                     }`}
                   >
                     {link.label}
@@ -152,7 +152,7 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
               key={link.id}
               onClick={() => handleNavClick(link.id, link.id === 'services' ? 'all' : null)}
               className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
-                activePage === link.id ? 'bg-white text-hala-blue font-bold shadow' : 'text-slate-100 hover:bg-white/10'
+                activePage === link.id ? 'text-white font-extrabold bg-white/15' : 'text-slate-100 hover:bg-white/10'
               }`}
             >
               {link.label}
