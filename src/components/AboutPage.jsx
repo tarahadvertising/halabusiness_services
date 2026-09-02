@@ -7,7 +7,7 @@ import {
 
 export default function AboutPage({ onNavigate }) {
   const stats = [
-    { label: 'Years of UAE PRO Excellence', value: '10+', icon: Award },
+    { label: 'Years of UAE PRO Excellence', value: '2+', icon: Award },
     { label: 'Visas & Immigration Clearances', value: '15,000+', icon: Users },
     { label: 'Companies Successfully Formed', value: '5,000+', icon: Building2 },
     { label: 'Government Approval Success', value: '99.8%', icon: ShieldCheck },
@@ -72,7 +72,6 @@ export default function AboutPage({ onNavigate }) {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Empowering Global Visionaries to Thrive in <span className="text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">Dubai &amp; UAE</span>
             </h1>
-
             <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
               Headquartered in Office 217, Mozna Building, Dubai, Hala Business Service is an authorized corporate services firm delivering seamless company formation, 10-Year Golden Visas, and high-speed government documentation.
             </p>

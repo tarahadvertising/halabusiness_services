@@ -26,7 +26,7 @@ export default function AboutSection({ onNavigate }) {
   ];
 
   const stats = [
-    { value: '15+', label: 'Years Exp' },
+    { value: '2+', label: 'Years Exp' },
     { value: '5k+', label: 'Clients' },
     { value: '99%', label: 'Approval' },
     { value: '24/7', label: 'Support' },
