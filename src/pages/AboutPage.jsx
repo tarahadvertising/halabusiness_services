@@ -126,9 +126,6 @@ export default function AboutPage({ onNavigate }) {
                 src="/images/mission-vision.jpg"
                 alt="Navigating UAE Regulations and Business Setup in Dubai"
                 className="rounded-card shadow-hala-xl w-full object-cover border-4 border-white aspect-[4/3]"
-                onError={(e) => {
-                  e.currentTarget.src = "/public/images/mission-vision.jpg";
-                }}
               />
               <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-hala-darker text-white p-5 rounded-2xl shadow-hala-xl border border-white/20 max-w-xs">
                 <div className="text-xs font-bold text-slate-300 uppercase">Headquarters</div>

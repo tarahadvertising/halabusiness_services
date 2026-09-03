@@ -16,12 +16,9 @@ export default function Footer({ onNavigate }) {
           {/* Col 1: Brand */}
           <div className="lg:col-span-5 space-y-4">
             <img
-              src="/logos/Logo.svg"
+              src="/logos/logo.svg"
               alt="Hala Business Service Logo"
               className="h-9 sm:h-10 lg:h-11 w-auto object-contain"
-              onError={(e) => {
-                e.currentTarget.src = "/public/logos/Logo.svg";
-              }}
             />
             <p className="text-slate-100 text-xs sm:text-sm leading-relaxed max-w-sm">
               Hala Business Service is an accredited corporate service provider and government PRO consultancy in Dubai, empowering international founders, investors, and families to thrive in the UAE.

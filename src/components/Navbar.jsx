@@ -33,12 +33,9 @@ export default function Navbar({ activePage, setActivePage, setSelectedCategory 
             className="flex items-center gap-3 text-left focus:outline-none"
           >
             <img
-              src="/logos/Logo.svg"
+              src="/logos/logo.svg"
               alt="Hala Business Service"
               className="h-7 sm:h-8 lg:h-9 w-auto object-contain"
-              onError={(e) => {
-                e.currentTarget.src = "/public/logos/Logo.svg";
-              }}
             />
           </button>
 
