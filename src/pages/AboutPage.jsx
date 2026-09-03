@@ -6,13 +6,6 @@ import {
 } from 'lucide-react';
 
 export default function AboutPage({ onNavigate }) {
-  const stats = [
-    { label: 'Years of UAE PRO Excellence', value: '5+', icon: Award },
-    { label: 'Visas & Immigration Clearances', value: '15,000+', icon: Users },
-    { label: 'Companies Successfully Formed', value: '5,000+', icon: Building2 },
-    { label: 'Government Approval Success', value: '99.8%', icon: ShieldCheck },
-  ];
-
   const values = [
     {
       title: '100% Fee Transparency',
@@ -41,21 +34,25 @@ export default function AboutPage({ onNavigate }) {
       step: '01',
       title: 'Strategic Consultation',
       desc: 'We analyze your commercial goals, shareholding structure, and tax strategy to recommend the ideal Mainland, Free Zone, or Offshore jurisdiction.',
+      image: '/images/workflow/step-1-consultation.jpg',
     },
     {
       step: '02',
       title: 'Legal Drafting & Approvals',
       desc: 'Our legal drafters formulate bilingual MOAs, trade name reservations, initial approvals, and municipal clearances.',
+      image: '/images/workflow/step-2-approval.jpg',
     },
     {
       step: '03',
       title: 'Express Residency & Stamping',
       desc: 'We escort you through VIP express medical fitness and Emirates ID biometrics with zero queuing or bureaucratic friction.',
+      image: '/images/workflow/step-3-medical.jpg',
     },
     {
       step: '04',
       title: 'Banking & Annual Corporate Compliance',
       desc: 'We connect you with tier-1 UAE banks and manage annual trade license renewals, Ejari registrations, and labor quotas.',
+      image: '/images/workflow/step-4-license.jpg',
     },
   ];
 
@@ -90,27 +87,7 @@ export default function AboutPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* 2. Key Stats Bar */}
-      <section className="bg-hala-ice py-12 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                  <div className="w-12 h-12 mx-auto rounded-xl bg-hala-subtle text-hala-blue flex items-center justify-center mb-3">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-hala-darker mb-1">{stat.value}</div>
-                  <div className="text-xs sm:text-sm font-semibold text-slate-500">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Company Story & Mission Section */}
+      {/* 2. Company Story & Mission Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -146,11 +123,11 @@ export default function AboutPage({ onNavigate }) {
 
             <div className="lg:col-span-6 relative">
               <img
-                src="/images/consulting.jpg"
-                alt="Hala Business Service Dubai Team"
+                src="/images/mission-vision.jpg"
+                alt="Navigating UAE Regulations and Business Setup in Dubai"
                 className="rounded-card shadow-hala-xl w-full object-cover border-4 border-white aspect-[4/3]"
                 onError={(e) => {
-                  e.currentTarget.src = "/public/images/consulting.jpg";
+                  e.currentTarget.src = "/public/images/mission-vision.jpg";
                 }}
               />
               <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-hala-darker text-white p-5 rounded-2xl shadow-hala-xl border border-white/20 max-w-xs">
@@ -217,14 +194,41 @@ export default function AboutPage({ onNavigate }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {milestones.map((m, idx) => (
-              <div key={idx} className="bg-hala-ice rounded-card p-7 border border-slate-200 text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-hala-blue text-white font-extrabold text-lg flex items-center justify-center mb-4 shadow">
-                  {m.step}
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-hala-blue/40 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between overflow-hidden"
+              >
+                <div>
+                  {/* Card Image Header */}
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={m.image}
+                      alt={m.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+
+                    {/* Step Badge */}
+                    <div className="absolute top-3.5 left-3.5 z-10">
+                      <span className="bg-hala-blue text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-md border border-white/20">
+                        Step {m.step}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card Content Body */}
+                  <div className="p-5">
+                    <h4 className="text-lg font-bold text-hala-darker mb-2 group-hover:text-hala-blue transition-colors">
+                      {m.title}
+                    </h4>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      {m.desc}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="text-lg font-bold text-hala-darker mb-2">{m.title}</h4>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{m.desc}</p>
               </div>
             ))}
           </div>

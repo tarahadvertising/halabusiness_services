@@ -172,7 +172,7 @@ export default function ContactPage({ onNavigate, showToast }) {
                     <input
                       type="tel"
                       required
-                      placeholder="+971 55 123 4567"
+                      placeholder="+971 00 000 0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-hala-blue/30 focus:border-hala-blue transition-all"
