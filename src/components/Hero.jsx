@@ -21,7 +21,7 @@ export default function Hero({ onNavigate }) {
       bgImage: '/images/tours-travels-bg.jpg',
       primaryBtnText: 'Explore Travel Packages',
       primaryBtnAction: () => {
-        window.open('https://wa.me/971551272700?text=Hello%20Hala%20Tours%20&%20Travels,%20I%20would%20like%20to%20inquire%20about%20Dubai%20tour%20packages%20and%20visas', '_blank');
+        window.open('https://wa.me/971554408208?text=Hello%20Hala%20Tours%20&%20Travels,%20I%20would%20like%20to%20inquire%20about%20Dubai%20tour%20packages%20and%20visas', '_blank');
       },
       whatsappText: 'Hello Hala Tours & Travels, I would like to book a Dubai tour package'
     }
@@ -43,7 +43,7 @@ export default function Hero({ onNavigate }) {
   }, [nextSlide]);
 
   return (
-    <section className="relative min-h-[75vh] py-16 sm:py-20 lg:py-24 flex items-center justify-center overflow-hidden bg-hala-darker select-none">
+    <section className="relative min-h-[85vh] py-16 sm:py-20 lg:py-24 flex items-center justify-center overflow-hidden bg-hala-darker select-none">
       {/* Sliding Background Images (Cross-Fade) */}
       {slides.map((slide, index) => (
         <div
@@ -55,39 +55,42 @@ export default function Hero({ onNavigate }) {
       ))}
 
       {/* Soft Tint Overlay for Text Legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-hala-darker/70 via-hala-blue/30 to-hala-darker/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-hala-darker/85 via-hala-darker/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-hala-darker/70 via-transparent to-hala-darker/30 pointer-events-none" />
 
       {/* Main Slide Content */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Main Brand Heading */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight mb-6 max-w-4xl mx-auto text-white transition-all duration-300">
-          {slides[currentSlide].title}
-        </h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left w-full">
+        <div className="max-w-3xl">
+          {/* Main Brand Heading */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight mb-6 text-white transition-all duration-300">
+            {slides[currentSlide].title}
+          </h1>
 
-        {/* Subtitle */}
-        <p className="text-slate-100 text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-3xl mx-auto font-normal mb-10 transition-all duration-300">
-          {slides[currentSlide].subtitle}
-        </p>
+          {/* Subtitle */}
+          <p className="text-slate-100 text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed font-normal mb-10 transition-all duration-300">
+            {slides[currentSlide].subtitle}
+          </p>
 
-        {/* Hero CTAs */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-5">
-          <button
-            onClick={slides[currentSlide].primaryBtnAction}
-            className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-100 text-hala-blue font-extrabold text-sm sm:text-base px-8 sm:px-9 py-3.5 sm:py-4 rounded-full transition-colors duration-200 border border-white/20 min-w-[210px]"
-          >
-            <span>{slides[currentSlide].primaryBtnText}</span>
-            <ArrowRight className="w-4 h-4 text-hala-blue" />
-          </button>
+          {/* Hero CTAs */}
+          <div className="flex flex-wrap justify-start items-center gap-3 sm:gap-4">
+            <button
+              onClick={slides[currentSlide].primaryBtnAction}
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-hala-blue font-extrabold text-xs sm:text-sm px-6 py-2.5 sm:py-3 rounded-full transition-colors duration-200 border border-white/20 shadow-md"
+            >
+              <span>{slides[currentSlide].primaryBtnText}</span>
+              <ArrowRight className="w-3.5 h-3.5 text-hala-blue" />
+            </button>
 
-          <a
-            href={`https://wa.me/971551272700?text=${encodeURIComponent(slides[currentSlide].whatsappText)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 bg-hala-blue hover:bg-hala-dark text-white font-bold text-sm sm:text-base px-8 sm:px-9 py-3.5 sm:py-4 rounded-full transition-colors duration-200 border border-white/20 min-w-[210px]"
-          >
-            <MessageSquare className="w-4 h-4 text-white" />
-            <span>WhatsApp Desk</span>
-          </a>
+            <a
+              href={`https://wa.me/971554408208?text=${encodeURIComponent(slides[currentSlide].whatsappText)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-hala-blue hover:bg-hala-dark text-white font-bold text-xs sm:text-sm px-6 py-2.5 sm:py-3 rounded-full transition-colors duration-200 border border-white/20 shadow-md"
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-white" />
+              <span>WhatsApp Desk</span>
+            </a>
+          </div>
         </div>
       </div>
 

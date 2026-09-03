@@ -26,7 +26,7 @@ export default function AboutSection({ onNavigate }) {
   ];
 
   const stats = [
-    { value: '2+', label: 'Years Exp' },
+    { value: '5+', label: 'Years Exp' },
     { value: '5k+', label: 'Clients' },
     { value: '99%', label: 'Approval' },
     { value: '24/7', label: 'Support' },
@@ -51,7 +51,7 @@ export default function AboutSection({ onNavigate }) {
               <div className="absolute inset-0 bg-gradient-to-t from-hala-darker/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <div className="text-lg sm:text-xl font-extrabold">
-                  Office 217, Mozna Building, Al Nahda, Dubai
+                  Al Khail Mall, Latifa Bint Hamdan St, Al Quoz, Dubai
                 </div>
               </div>
             </div>

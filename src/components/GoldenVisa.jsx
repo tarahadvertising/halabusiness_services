@@ -67,7 +67,7 @@ export default function GoldenVisa({ onNavigate }) {
                 Check Free Eligibility <ArrowRight className="w-4 h-4" />
               </button>
               <a
-                href="https://wa.me/971551272700?text=Hello%20Hala%20Business%20Service,%20I%20want%20to%20apply%20for%20a%2010-Year%20Golden%20Visa"
+                href="https://wa.me/971554408208?text=Hello%20Hala%20Business%20Service,%20I%20want%20to%20apply%20for%20a%2010-Year%20Golden%20Visa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold text-sm px-6 py-3.5 rounded-full transition-colors"

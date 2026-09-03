@@ -76,7 +76,7 @@ export default function CostCalculator({ onNavigate, showToast }) {
     }
 
     setTimeout(() => {
-      window.open(`https://wa.me/971551272700?text=${text}`, '_blank');
+      window.open(`https://wa.me/971554408208?text=${text}`, '_blank');
     }, 600);
   };
 

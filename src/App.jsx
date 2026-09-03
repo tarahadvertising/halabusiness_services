@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ServicesSection from './components/ServicesSection';
-import ProcessWorkflow from './components/ProcessWorkflow';
-import AboutSection from './components/AboutSection';
-import AboutPage from './components/AboutPage';
 import Footer from './components/Footer';
 import ServiceModal from './components/ServiceModal';
 import Toast from './components/Toast';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+// Page Views
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
@@ -43,26 +44,19 @@ export default function App() {
       {/* Main Content Areas based on activePage view state */}
       <main className="flex-grow">
         {activePage === 'home' && (
-          <>
-            <Hero onNavigate={handleNavigate} />
-            <AboutSection onNavigate={handleNavigate} />
-            <ServicesSection
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              onSelectService={setActiveModalService}
-            />
-            <ProcessWorkflow />
-          </>
+          <HomePage
+            onNavigate={handleNavigate}
+            onSelectService={setActiveModalService}
+          />
         )}
 
         {activePage === 'services' && (
-          <div className="pt-2">
-            <ServicesSection
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              onSelectService={setActiveModalService}
-            />
-          </div>
+          <ServicesPage
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            onSelectService={setActiveModalService}
+            onNavigate={handleNavigate}
+          />
         )}
 
         {activePage === 'about' && (
@@ -70,9 +64,7 @@ export default function App() {
         )}
 
         {activePage === 'contact' && (
-          <div className="pt-2">
-            <AboutSection onNavigate={handleNavigate} />
-          </div>
+          <ContactPage onNavigate={handleNavigate} showToast={showToast} />
         )}
       </main>
 

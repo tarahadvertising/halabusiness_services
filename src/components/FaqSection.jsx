@@ -92,7 +92,7 @@ export default function FaqSection() {
             <p className="text-xs text-slate-500">Our bilingual senior PRO officers are available 6 days a week.</p>
           </div>
           <a
-            href="https://wa.me/971551272700?text=Hello%20Hala%20Business%20Service,%20I%20have%20a%20question%20regarding%20Dubai%20business%20setup"
+            href="https://wa.me/971554408208?text=Hello%20Hala%20Business%20Service,%20I%20have%20a%20question%20regarding%20Dubai%20business%20setup"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-whatsapp hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full transition-colors"

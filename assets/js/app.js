@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownItems = document.querySelectorAll('.dropdown-item');
 
   function filterServices(category) {
+    if (!category) return;
     filterBtns.forEach(btn => {
       if (btn.getAttribute('data-filter') === category) {
         btn.classList.add('active');
@@ -86,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Check URL query parameters (e.g. services.html?filter=visa)
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+  if (filterParam) {
+    filterServices(filterParam);
+  }
 
   // 4. Interactive Business Setup & Visa Calculator
   const jurisdictionCards = document.querySelectorAll('#jurisdictionOptions .option-card');
@@ -163,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btnSendCalcWhatsApp?.addEventListener('click', () => {
     const total = (calcState.jurisdictionBase + (calcState.visaCount * calcState.visaUnitCost) + calcState.officeCost).toLocaleString();
     const msg = `Hello Hala Business Service, I customized a setup estimate on your website:\n- Jurisdiction: ${calcState.jurisdictionName}\n- Visas: ${calcState.visaCount}\n- Workspace: ${calcState.officeName}\n- Estimated Total: AED ${total}\nPlease confirm the final quote and consultation availability.`;
-    window.open(`https://wa.me/971551272700?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/971554408208?text=${encodeURIComponent(msg)}`, '_blank');
   });
 
   // Book Consultation button from Calculator
@@ -250,52 +258,36 @@ document.addEventListener('DOMContentLoaded', () => {
       timeline: 'Same-day turnaround (within 24 hours).'
     },
     'virtual-office': {
-      title: 'Virtual Office Space & Registered Business Addresses',
-      tag: 'Workspace Solutions',
-      badge: 'DED Approved',
+      title: 'Virtual Office & Ejari Services',
+      tag: 'Corporate & Legal',
+      badge: 'DED & DLD Approved',
       icon: 'fa-laptop-code',
-      overview: 'Get a prestigious Dubai corporate business address without paying exorbitant physical lease rates. Fully approved by the Dubai Economic Department and includes official Ejari.',
+      overview: 'Get a prestigious Dubai corporate business address and instant Dubai Land Department (DLD) Ejari certificate. Fully compliant with DED licensing, renewals, and family visa sponsorships.',
       features: [
-        'Prime business locations in Business Bay, Downtown, Sheikh Zayed Rd & Al Qusais',
-        'Immediate official Ejari certificate issued under your trade license',
-        'Professional mail, courier, and call answering handling services',
-        'Access to executive boardrooms and modern client meeting spaces',
-        'Fulfills all DED and bank account inspection compliance requirements'
+        'Official Dubai Land Department (DLD) Ejari Certificate (Commercial & Residential)',
+        'Prime business registered addresses in Business Bay, Downtown & Sheikh Zayed Rd',
+        'Professional mail, courier reception, and meeting room access',
+        'Fulfills 100% of DED licensing and corporate bank account compliance requirements',
+        'Instant digital PDF certificate generation with official QR code verification'
       ],
       requirements: 'Valid Trade License / Initial Approval and owner passport copies.',
       timeline: 'Instant issuance upon agreement (1 - 2 hours).'
     },
-    'documents-clearing': {
-      title: 'Comprehensive Corporate PRO & Documents Clearing',
-      tag: 'Government Liaison',
-      badge: 'Hassle-Free',
-      icon: 'fa-file-shield',
-      overview: 'A dedicated team of senior Arabic-speaking PRO specialists managing all ministerial, municipal, and immigration submissions on your behalf.',
-      features: [
-        'Direct representation across all federal and local government departments',
-        'Document legalization, fine reductions, and status regularization',
-        'Labor quota increases and corporate immigration file updates',
-        'Door-to-door courier collection and return of all sensitive paperwork',
-        'Dedicated corporate PRO account manager available 24/7'
-      ],
-      requirements: 'Company establishment card and authorization letter.',
-      timeline: 'Continuous ongoing support and expedited fast-track channels.'
-    },
     'amer-tasheel-tadbeer': {
-      title: 'Amer, Tasheel & Tadbeer Government Services',
-      tag: 'Official Government Hub',
-      badge: 'Govt Authorized',
+      title: 'Amer, Tasheel, Tadbeer & Documents Clearing',
+      tag: 'Official Government Hub & PRO',
+      badge: 'Govt Authorized PRO',
       icon: 'fa-landmark-dome',
-      overview: 'One-stop authorized government typing center. We handle GDRFA entry permits and residency visas (Amer), MOHRE employment contracts and work permits (Tasheel), and domestic worker sponsorship (Tadbeer).',
+      overview: 'One-stop authorized government typing center and dedicated corporate PRO services. We handle GDRFA entry permits and residency visas (Amer), MOHRE employment contracts and work permits (Tasheel), domestic worker sponsorship (Tadbeer), and comprehensive document clearing across all UAE ministries.',
       features: [
         'Amer: Express residency visa typing, entry permit issuance, and status changes',
-        'Tasheel: Labor contract drafting, electronic work permits, and quota allocations',
-        'Tadbeer: Sponsoring domestic staff, housekeepers, drivers, and nannies',
-        'Absconding case resolutions and overstay fine waivers',
-        'Zero waiting in queues with full digital submission handling'
+        'Tasheel & Tadbeer: Labor contract drafting, electronic work permits, and domestic worker sponsorship',
+        'Documents Clearing: Direct submissions across all federal ministries and municipal departments',
+        'Fine reductions, absconding case resolutions, and legal status regularization',
+        'Dedicated corporate PRO account manager with express WhatsApp case updates'
       ],
-      requirements: 'Sponsor Emirates ID, employee passport/visa, and salary certificate / tenancy contract.',
-      timeline: '24 to 48 hours.'
+      requirements: 'Sponsor Emirates ID, Trade License / Establishment Card, passport copies, and original documents requiring clearance.',
+      timeline: '2 to 4 hours for typing | 24 to 48 hours for clearances.'
     },
     'visa-immigration': {
       title: 'Investor, Partner & Corporate Employee Visa Immigration',
@@ -361,22 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
       requirements: 'Initial Approval certificate, proposed location floor plans, and company profile.',
       timeline: '3 to 7 business days depending on authority.'
     },
-    'ded-services': {
-      title: 'Dubai Economic Department (DET / DED) Direct Services',
-      tag: 'Mainland Authority',
-      badge: 'Mainland DED',
-      icon: 'fa-scale-unbalanced-flip',
-      overview: 'Comprehensive direct liaison with Dubai Economy and Tourism (DET) for all company establishment, trade name reservation, commercial licensing, and branch registrations.',
-      features: [
-        'Trade name search, reservation, and instant certificate issuance',
-        'Initial Approval and activity code mapping from DED classification list',
-        'Instant License scheme (launch business immediately without office Year 1)',
-        'Commercial permits for sales, promotions, and signage branding',
-        'Company liquidation, deregistration, and official DED audit clearance'
-      ],
-      requirements: 'Passport copies of shareholders and proposed business activities.',
-      timeline: '24 to 48 hours.'
-    },
     'notary-services': {
       title: 'Legal Drafting & Dubai Courts Notary Public Services',
       tag: 'Legal Formations',
@@ -409,22 +385,6 @@ document.addEventListener('DOMContentLoaded', () => {
       requirements: 'Original passport, entry permit/visa copy, and passport photo.',
       timeline: 'Medical results in 2-4 hours; biometrics same day or next day.'
     },
-    'ejari-services': {
-      title: 'Official Ejari Registration & Tenancy Contracts',
-      tag: 'Dubai Land Dept',
-      badge: 'Land Dept (DLD)',
-      icon: 'fa-house-chimney-crack',
-      overview: 'Official Dubai Land Department (DLD) Ejari tenancy contract registration and certification required for company trade licenses, renewals, and family visas.',
-      features: [
-        'Commercial office, retail shop, flexi-desk, and warehouse Ejari registration',
-        'Residential tenancy contract Ejari for family visa sponsorship',
-        'Official Ejari cancellation and transfer certificates',
-        'Resolution of landlord registration disputes and title deed verifications',
-        'Instant official PDF Ejari certificate with QR code validation'
-      ],
-      requirements: 'Tenancy contract, Landlord Title Deed, Tenant Trade License / Emirates ID.',
-      timeline: '1 to 2 hours.'
-    },
     'certificate-attestation': {
       title: 'Document Legalization & Certificate Attestation',
       tag: 'Global Legalization',
@@ -440,6 +400,37 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       requirements: 'Original certificate / document and passport copy of holder.',
       timeline: '3 to 7 business days depending on originating country.'
+    },
+    'vat-services': {
+      title: 'UAE VAT & Corporate Tax Services',
+      tag: 'Federal Tax Authority',
+      badge: 'FTA Registered',
+      icon: 'fa-receipt',
+      overview: 'Full-spectrum UAE VAT registration, quarterly VAT return filing, deregistration, FTA audit support, voluntary disclosures, and Corporate Tax compliance advisory.',
+      features: [
+        'Federal Tax Authority (FTA) VAT Registration & fast TRN certificate issuance',
+        'Accurate quarterly VAT return filing (Form 201) and input/output tax reconciliation',
+        'UAE Corporate Tax (9%) registration and strategic financial advisory',
+        'VAT Deregistration, penalty waiver submissions, and reconsiderations',
+        'Full FTA compliance review and bookkeeping audit support'
+      ],
+      requirements: 'Valid Trade License, MOA, passport/Emirates ID of authorized signatory, company bank statements, and sales turnover records.',
+      timeline: '2 to 4 business days for TRN issuance; 24-48 hours for VAT return filing.'
+    },
+    'trademark-iso-registration': {
+      title: 'Trademark & ISO Registration Services',
+      tag: 'Brand Protection & Quality',
+      badge: 'MOE & ISO Certified',
+      icon: 'fa-certificate',
+      overview: 'Our simple and efficient 4-stage process ensures smooth brand registration and IP protection in the UAE without administrative hassle.',
+      features: [
+        '1. Trademark Search: Verification to ensure your brand name/logo is unique and avoid legal conflicts',
+        '2. Filing Application: Accurate documentation preparation and submission to UAE authorities',
+        '3. Examination: Formal evaluation and compliance review by the Ministry of Economy',
+        '4. Publication & Certificate: Official gazette publication and final 10-year trademark certificate issuance'
+      ],
+      requirements: 'Brand name, high-resolution logo artwork, valid UAE Trade License copy, owner passport copy, and Power of Attorney (POA).',
+      timeline: 'Trademark: 30 to 60 days (including 30-day gazette period); ISO: 2 to 3 weeks.'
     }
   };
 
@@ -480,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <a href="https://wa.me/971551272700?text=Hello%20Hala%20Business%20Service,%20I%20am%20interested%20in%20${encodeURIComponent(data.title)}" target="_blank" class="btn btn-whatsapp" style="flex: 1;">
+        <a href="https://wa.me/971554408208?text=Hello%20Hala%20Business%20Service,%20I%20am%20interested%20in%20${encodeURIComponent(data.title)}" target="_blank" class="btn btn-whatsapp" style="flex: 1;">
           <i class="fa-brands fa-whatsapp"></i> Inquire on WhatsApp
         </a>
         <button class="btn btn-primary" onclick="closeServiceModalAndScroll('${data.title}')" style="flex: 1;">
@@ -546,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showToast('Inquiry submitted! Redirecting to WhatsApp...');
 
     setTimeout(() => {
-      window.open(`https://wa.me/971551272700?text=${encodeURIComponent(waMsg)}`, '_blank');
+      window.open(`https://wa.me/971554408208?text=${encodeURIComponent(waMsg)}`, '_blank');
       heroQuickForm.reset();
     }, 1200);
   });
@@ -565,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showToast('Thank you! Our PRO consultant will connect with you shortly on WhatsApp.');
 
     setTimeout(() => {
-      window.open(`https://wa.me/971551272700?text=${encodeURIComponent(waMsg)}`, '_blank');
+      window.open(`https://wa.me/971554408208?text=${encodeURIComponent(waMsg)}`, '_blank');
       mainContactForm.reset();
     }, 1200);
   });

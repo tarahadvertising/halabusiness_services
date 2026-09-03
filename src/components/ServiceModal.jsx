@@ -6,7 +6,7 @@ export default function ServiceModal({ service, onClose, onBookNow }) {
 
   const handleWhatsAppInquiry = () => {
     const text = `*Service Inquiry - Hala Business Service*%0A%0A*Service:* ${service.title}%0A*Category:* ${service.categoryLabel}%0A*Price Estimate:* ${service.price}%0A%0APlease assist me with the application prerequisites and fast-track booking.`;
-    window.open(`https://wa.me/971551272700?text=${text}`, '_blank');
+    window.open(`https://wa.me/971554408208?text=${text}`, '_blank');
   };
 
   return (

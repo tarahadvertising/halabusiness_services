@@ -7,7 +7,7 @@ import {
 
 export default function AboutPage({ onNavigate }) {
   const stats = [
-    { label: 'Years of UAE PRO Excellence', value: '2+', icon: Award },
+    { label: 'Years of UAE PRO Excellence', value: '5+', icon: Award },
     { label: 'Visas & Immigration Clearances', value: '15,000+', icon: Users },
     { label: 'Companies Successfully Formed', value: '5,000+', icon: Building2 },
     { label: 'Government Approval Success', value: '99.8%', icon: ShieldCheck },
@@ -63,23 +63,25 @@ export default function AboutPage({ onNavigate }) {
     <div className="bg-white">
 
       {/* 1. Dedicated About Us Hero Banner */}
-      <section className="relative bg-gradient-to-br from-hala-deep via-hala-darker to-hala-blue text-white py-16 lg:py-24 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-hala-blue/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-hala-light/20 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative min-h-[440px] sm:min-h-[480px] lg:min-h-[520px] flex items-center py-16 lg:py-24 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+          style={{ backgroundImage: `url('/images/about_bg.jpg')` }}
+        />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-              Empowering Global Visionaries to Thrive in <span className="text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">Dubai &amp; UAE</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
+              Empowering Global Visionaries to Thrive in <span className="text-hala-blue">Dubai &amp; UAE</span>
             </h1>
-            <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-              Headquartered in Office 217, Mozna Building, Dubai, Hala Business Service is an authorized corporate services firm delivering seamless company formation, 10-Year Golden Visas, and high-speed government documentation.
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-medium">
+              Headquartered in Al Khail Mall, Latifa Bint Hamdan St, Al Quoz, Dubai, Hala Business Service is an authorized corporate services firm delivering seamless company formation, 10-Year Golden Visas, and high-speed government documentation.
             </p>
-
             <div className="flex justify-center gap-4 pt-2">
               <button
                 onClick={() => onNavigate('contact')}
-                className="bg-white hover:bg-slate-100 text-hala-blue font-extrabold text-sm px-7 py-3.5 rounded-full shadow-xl transition-all inline-flex items-center gap-2"
+                className="bg-hala-blue hover:bg-hala-darker text-white font-extrabold text-sm px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all inline-flex items-center gap-2"
               >
                 Meet With A Senior Consultant <ArrowRight className="w-4 h-4" />
               </button>
@@ -153,7 +155,7 @@ export default function AboutPage({ onNavigate }) {
               />
               <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-hala-darker text-white p-5 rounded-2xl shadow-hala-xl border border-white/20 max-w-xs">
                 <div className="text-xs font-bold text-slate-300 uppercase">Headquarters</div>
-                <div className="text-sm font-extrabold mt-1">Office 217, Mozna Building, Al Nahda, Dubai, UAE</div>
+                <div className="text-sm font-extrabold mt-1">Al Khail Mall, Latifa Bint Hamdan St - Al Qouz Fourth - Al Quoz - Dubai</div>
               </div>
             </div>
 
@@ -229,20 +231,39 @@ export default function AboutPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* 8. Call to Action Banner */}
-      <section className="py-16 bg-hala-blue text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold">Ready to Launch or Expand in Dubai?</h2>
-          <p className="text-slate-100 text-base sm:text-lg">
-            Schedule a complimentary advisory session with our accredited senior PRO desk today.
-          </p>
-          <div className="flex justify-center gap-4 pt-2">
-            <button
-              onClick={() => onNavigate('contact')}
-              className="bg-white hover:bg-slate-100 text-hala-blue font-extrabold text-sm px-8 py-3.5 rounded-full shadow-xl transition-all inline-flex items-center gap-2"
-            >
-              Book Free Consultation <ArrowRight className="w-4 h-4" />
-            </button>
+      {/* 8. Call to Action Banner (Distinct Card separated from Footer) */}
+      <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative bg-hala-blue rounded-3xl p-8 sm:p-12 lg:p-14 text-white text-center shadow-2xl border border-white/20 overflow-hidden">
+            {/* Background Glows */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                Ready to Launch or Expand in Dubai?
+              </h2>
+              <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                Schedule a complimentary advisory session with our accredited senior PRO desk today. Fast, reliable, and 100% compliant business setup solutions.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 pt-1">
+                <button
+                  onClick={() => onNavigate('contact')}
+                  className="bg-white hover:bg-slate-100 text-hala-blue font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-1.5"
+                >
+                  <span>Book Free Consultation</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+                <a
+                  href="https://wa.me/971554408208?text=Hello%20Hala%20Business%20Service,%20I%20would%20like%20a%20consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full backdrop-blur-md transition-all inline-flex items-center gap-1.5"
+                >
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

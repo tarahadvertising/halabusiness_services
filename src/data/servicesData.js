@@ -1,5 +1,217 @@
 export const servicesData = [
   {
+    id: "company-formation",
+    title: "Business Setup",
+    category: "business",
+    categoryLabel: "Company Setup & Licenses",
+    badge: "100% Expat Ownership",
+    badgeType: "primary",
+    image: "/images/services/company-formation.jpg",
+    shortDesc: "Establish Mainland LLC, Free Zone, or Offshore entities in Dubai and across the UAE with 100% foreign ownership, instant licensing, and corporate bank accounts.",
+    price: "Starting AED 11,500",
+    featured: true,
+    icon: "Building2",
+    features: [
+      "Dubai Mainland (DED) & 50+ UAE Free Zones",
+      "Commercial, Professional, Industrial & Tech Licenses",
+      "Instant Trade License with No Initial Ejari",
+      "Tier-1 Corporate Bank Account Guarantee"
+    ],
+    details: {
+      overview: "Launch your business in the world's most dynamic economy. We handle trade name reservations, initial approvals, MOA notarization, and licensing.",
+      deliverables: [
+        "Official Commercial / Professional Trade License",
+        "Certificate of Incorporation & Trade Name Certificate",
+        "Memorandum & Articles of Association (MOA / AOA)",
+        "Establishment Card & Immigration File",
+        "Corporate Bank Account Introduction"
+      ],
+      prerequisites: [
+        "Passport copy and visa page/entry stamp of shareholders",
+        "3 Proposed company trade names in order of preference",
+        "Brief description of business activities",
+        "Emirates ID (for UAE residents)"
+      ],
+      timeline: "24 - 48 Hours for Instant License | 3 - 5 Days for Standard Mainland",
+      governmentAuthority: "Dubai Department of Economy & Tourism (DET) & Free Zone Authorities"
+    }
+  },
+  {
+    id: "visa-immigration",
+    title: "Visa Services",
+    category: "visa",
+    categoryLabel: "Visa & Immigration",
+    badge: "2 & 3 Year Visas",
+    badgeType: "primary",
+    image: "/images/services/visa-immigration.jpg",
+    shortDesc: "Complete investor visa, partner visa, and corporate employee visa clearance including quota approvals, medical fitness typing, and biometric stamping.",
+    price: "3 - 5 Days Completion",
+    featured: true,
+    icon: "FileBadge",
+    features: [
+      "Investor & Partner 2-Year Residence Visas",
+      "Corporate Employee Employment Visas & Labor Quota",
+      "In-Country Status Change (Without Exiting UAE)",
+      "VIP Express Medical & Biometrics Assistance"
+    ],
+    details: {
+      overview: "We manage the entire visa lifecycle for company shareholders, executives, and staff with zero delays and complete legal compliance.",
+      deliverables: [
+        "e-Visa / Entry Permit",
+        "In-Country Status Change Approval",
+        "VIP Medical Fitness Certificate",
+        "Emirates ID Biometric Stamping & Plastic Card Delivery"
+      ],
+      prerequisites: [
+        "Company Trade License & Establishment Card",
+        "Applicant Passport Copy & White Background Digital Photo",
+        "Attested Educational Degree (for Managerial / Skilled titles)",
+        "Current UAE tourist or cancelled visa copy"
+      ],
+      timeline: "3 - 5 Working Days (Express 48h Available)",
+      governmentAuthority: "GDRFA Dubai & Federal Authority for Identity (ICP)"
+    }
+  },
+  {
+    id: "certificate-attestation",
+    title: "Attestation Services",
+    category: "gov",
+    categoryLabel: "Govt Approvals & PRO",
+    badge: "MOFA & Embassy",
+    badgeType: "primary",
+    image: "/images/services/certificate-attestation.jpg",
+    shortDesc: "International document legalization including MOFA (Ministry of Foreign Affairs), UAE Embassy, Apostille, educational degrees, birth and marriage certificates.",
+    price: "Worldwide Service",
+    featured: true,
+    icon: "Stamp",
+    features: [
+      "Ministry of Foreign Affairs (MOFA) UAE Attestation",
+      "Embassy & Consulate Legalization in Country of Origin",
+      "Educational Degrees, Diplomas, Transcripts Legalization",
+      "Birth, Marriage, Police Clearance & Commercial Power of Attorney"
+    ],
+    details: {
+      overview: "Legalize your foreign documents for official use in the UAE. We manage home country notarization, state ministry authentication, UAE Embassy stamping, and MOFA UAE attestation.",
+      deliverables: [
+        "Original Document with Official MOFA & Embassy Stamps",
+        "Certified Arabic Legal Translation (Ministry of Justice)",
+        "Secure Door-to-Door Courier Delivery"
+      ],
+      prerequisites: [
+        "Original physical document",
+        "Passport copy of document owner"
+      ],
+      timeline: "Express MOFA UAE: 24h | International Embassy: 5 - 10 Days",
+      governmentAuthority: "Ministry of Foreign Affairs (MOFA) UAE & Global Embassies"
+    }
+  },
+  {
+    id: "vat-services",
+    title: "VAT Services",
+    category: "corporate",
+    categoryLabel: "Corporate & Legal",
+    badge: "FTA Registered",
+    badgeType: "primary",
+    image: "/images/services/vat-services.jpg",
+    shortDesc: "End-to-end UAE VAT registration, quarterly VAT return filing, deregistration, FTA audit compliance, voluntary disclosures, and Corporate Tax registration.",
+    price: "Starting AED 500",
+    featured: true,
+    icon: "Receipt",
+    features: [
+      "Federal Tax Authority (FTA) VAT Registration & TRN Issuance",
+      "Quarterly VAT Return Filing (Form 201) & Reconciliation",
+      "UAE Corporate Tax (9%) Registration & Financial Advisory",
+      "VAT Deregistration, Penalty Waivers & Reconsiderations"
+    ],
+    details: {
+      overview: "Ensure 100% compliance with UAE Federal Tax Authority (FTA) regulations. Hala Business Service assists businesses with rapid TRN registration, bookkeeping review, quarterly VAT filing, and corporate tax compliance.",
+      deliverables: [
+        "Official Tax Registration Number (TRN) Certificate",
+        "Accurate Quarterly VAT Return (Form 201) Submission",
+        "Corporate Tax Registration & Compliance Certificate",
+        "FTA Audit Defense & Penalty Waiver Support"
+      ],
+      prerequisites: [
+        "Valid UAE Trade License copy and MOA / AOA",
+        "Passport, Visa and Emirates ID of authorized signatory",
+        "Financial records / sales invoices exceeding threshold (AED 375,000 mandatory / AED 187,500 voluntary)",
+        "Company Corporate Bank Account statement"
+      ],
+      timeline: "2 - 4 Working Days for TRN Issuance | 24 - 48 Hours for Return Filing",
+      governmentAuthority: "Federal Tax Authority (FTA) UAE"
+    }
+  },
+  {
+    id: "trademark-iso-registration",
+    title: "Trademark & ISO Registration Services",
+    category: "corporate",
+    categoryLabel: "Corporate & Legal",
+    badge: "MOE & ISO Certified",
+    badgeType: "vip",
+    image: "/images/services/trademark-iso-registration.jpg",
+    shortDesc: "Comprehensive 4-step registration: Trademark Search, Application Filing, Ministry Examination, and Official Gazette Publication with Certificate Issuance.",
+    price: "Brand Protection",
+    featured: true,
+    icon: "BadgeCheck",
+    features: [
+      "Trademark Search & Conflict Check",
+      "Application Preparation & Authority Filing",
+      "Formal Ministry Examination & Compliance",
+      "Gazette Publication & 10-Year Certificate Issuance"
+    ],
+    details: {
+      overview: "A streamlined 4-stage process ensuring smooth brand protection: thorough Trademark Search, accurate Application Filing, government Examination, and Official Gazette Publication with final certificate issuance.",
+      deliverables: [
+        "1. Trademark Search: In-depth search report to ensure brand uniqueness",
+        "2. Filing Application: Document preparation and submission to authorities",
+        "3. Examination: Formal evaluation and compliance review by the Ministry",
+        "4. Publication & Certificate: Gazette publishing and official 10-year certificate"
+      ],
+      prerequisites: [
+        "Brand name, logo artwork, and business activities",
+        "Valid UAE Trade License copy",
+        "Owner passport / Emirates ID copy",
+        "Power of Attorney (POA) for representation"
+      ],
+      timeline: "Trademark: 30 - 60 Days (Including 30-Day Gazette Period) | ISO: 2 - 3 Weeks",
+      governmentAuthority: "UAE Ministry of Economy (MOE) & International ISO Bodies"
+    }
+  },
+  {
+    id: "notary-services",
+    title: "Notary Services",
+    category: "corporate",
+    categoryLabel: "Corporate & Legal",
+    badge: "Dubai Courts MOJ",
+    badgeType: "primary",
+    image: "/images/services/notary-services.jpg",
+    shortDesc: "Legal drafting, Memorandum of Association (MOA), Power of Attorney (POA), Board Resolutions, and electronic Notary Public signing before Dubai Courts.",
+    price: "Bilingual AR/EN",
+    featured: false,
+    icon: "FileText",
+    features: [
+      "MOA & Local Service Agent Legal Drafting",
+      "General & Special Power of Attorney (POA)",
+      "Dubai Courts Online Electronic Notary Public Attestation",
+      "Share Sale Agreements & Board Resolutions"
+    ],
+    details: {
+      overview: "Execute legally binding corporate contracts with Dubai Courts accredited legal translators and electronic notary authentication.",
+      deliverables: [
+        "Notarized Bilingual MOA / POA Certificate",
+        "Dubai Courts Electronic Stamp & Verification QR Code",
+        "Digital PDF & Attested Physical Copies"
+      ],
+      prerequisites: [
+        "Original Emirates ID & Passport of signatories",
+        "Company Trade License copy",
+        "Draft agreement in Arabic & English"
+      ],
+      timeline: "Same Day (1 - 3 Hours via Online Notary)",
+      governmentAuthority: "Dubai Courts & Ministry of Justice (MOJ)"
+    }
+  },
+  {
     id: "golden-visa",
     title: "Golden Visa 10 Year",
     category: "visa",
@@ -34,43 +246,6 @@ export const servicesData = [
       ],
       timeline: "48 - 72 Hours for Initial Approval | 5-7 Days Total Completion",
       governmentAuthority: "GDRFA / Federal Authority for Identity & Citizenship (ICP)"
-    }
-  },
-  {
-    id: "company-formation",
-    title: "Company Formation",
-    category: "business",
-    categoryLabel: "Company Setup & Licenses",
-    badge: "100% Expat Ownership",
-    badgeType: "primary",
-    image: "/images/services/company-formation.jpg",
-    shortDesc: "Establish Mainland LLC, Free Zone, or Offshore entities in Dubai and across the UAE with 100% foreign ownership and corporate bank accounts.",
-    price: "Starting AED 11,500",
-    featured: true,
-    icon: "Building2",
-    features: [
-      "Dubai Mainland (DED) & 50+ UAE Free Zones",
-      "Commercial, Professional, Industrial & Tech Licenses",
-      "Instant Trade License with No Initial Ejari",
-      "Tier-1 Corporate Bank Account Guarantee"
-    ],
-    details: {
-      overview: "Launch your business in the world's most dynamic economy. We handle trade name reservations, initial approvals, MOA notarization, and licensing.",
-      deliverables: [
-        "Official Commercial / Professional Trade License",
-        "Certificate of Incorporation & Trade Name Certificate",
-        "Memorandum & Articles of Association (MOA / AOA)",
-        "Establishment Card & Immigration File",
-        "Corporate Bank Account Introduction"
-      ],
-      prerequisites: [
-        "Passport copy and visa page/entry stamp of shareholders",
-        "3 Proposed company trade names in order of preference",
-        "Brief description of business activities",
-        "Emirates ID (for UAE residents)"
-      ],
-      timeline: "24 - 48 Hours for Instant License | 3 - 5 Days for Standard Mainland",
-      governmentAuthority: "Dubai Department of Economy & Tourism (DET) & Free Zone Authorities"
     }
   },
   {
@@ -111,142 +286,74 @@ export const servicesData = [
   },
   {
     id: "virtual-office",
-    title: "Virtual Office Space",
+    title: "Virtual Office & Ejari Services",
     category: "corporate",
     categoryLabel: "Corporate & Legal",
-    badge: "DED Approved",
+    badge: "DED & DLD Approved",
     badgeType: "primary",
     image: "/images/services/virtual-office.jpg",
-    shortDesc: "Cost-effective registered office addresses, flexi-desks, and shared office leases in prime Dubai business districts with instant Ejari for trade licensing.",
-    price: "Starting AED 4,500/yr",
+    shortDesc: "DED-approved registered business addresses, flexi-desks, and instant Dubai Land Department (DLD) Ejari tenancy certificates for licensing and family visas.",
+    price: "Instant Ejari Sync",
     featured: false,
     icon: "Laptop",
     features: [
-      "Prime Dubai Business Address (Al Nahda, Business Bay, Sheikh Zayed Rd)",
-      "Instant Official Ejari Certificate Included",
-      "DED Inspection Ready & Compliant",
-      "Mail Handling & High-Tech Meeting Room Access"
+      "Official Dubai Land Department (DLD) Ejari Certificate",
+      "Prime Dubai Business Address & Flexi-Desk Leases",
+      "Residential & Commercial Tenancy Ejari Registration",
+      "DED Inspection Ready & Bank Compliance Guaranteed"
     ],
     details: {
-      overview: "Satisfy 100% of Dubai Economic Department licensing regulations without the overhead of renting full-scale commercial real estate.",
+      overview: "Satisfy 100% of Dubai Economic Department (DED) and Dubai Land Department (DLD) licensing regulations with instant Ejari attestation, virtual registered addresses, and corporate workspace solutions.",
       deliverables: [
-        "Annual Commercial Tenancy Contract",
-        "Attested Ejari Registration Certificate",
-        "Building Inspection & Signage Assistance",
-        "Conference Room & Reception Services"
+        "Official DLD Attested Ejari Tenancy Certificate (Commercial & Residential)",
+        "Annual Commercial Registered Business Address Contract",
+        "DED Licensing Compliance & Bank Inspection Signage Support",
+        "Mail Collection, Courier Reception & Client Meeting Rooms"
       ],
       prerequisites: [
-        "Copy of Initial Approval from DED / Trade License",
-        "Passport & Emirates ID copy of Manager / Owner",
-        "Signed tenancy agreement"
+        "Trade License copy / DED Initial Approval (for business Ejari)",
+        "Tenancy Contract & Landlord Title Deed (for private lease attestation)",
+        "Passport & Emirates ID of the owner / authorized signatory"
       ],
-      timeline: "1 - 2 Hours for Instant Ejari Generation",
-      governmentAuthority: "Dubai Land Department (DLD) & DED"
+      timeline: "1 - 2 Hours for Instant Ejari Issuance",
+      governmentAuthority: "Dubai Land Department (DLD) & Dubai Economy and Tourism (DET)"
     }
   },
   {
-    id: "documents-clearing",
-    title: "Documents Clearing",
+    id: "amer-tasheel-tadbeer-documents-clearing",
+    title: "Amer, Tasheel, Tadbeer & Documents Clearing",
     category: "gov",
     categoryLabel: "Govt Approvals & PRO",
-    badge: "24/7 PRO Support",
-    badgeType: "primary",
-    image: "/images/services/documents-clearing.jpg",
-    shortDesc: "Dedicated corporate PRO services liaising with all federal ministries, immigration gates, municipal registries, and court departments across Dubai.",
-    price: "Custom PRO Packages",
-    featured: false,
-    icon: "FileCheck",
-    features: [
-      "Dedicated Corporate PRO Account Officer",
-      "Door-to-Door Document Collection & Delivery",
-      "Fine Waivers & Legal Status Regularization",
-      "All Federal Ministry Submissions Managed"
-    ],
-    details: {
-      overview: "Save time and eliminate bureaucratic stress. Our accredited PRO team handles end-to-end typing, submissions, and status tracking.",
-      deliverables: [
-        "Complete Government Receipt & Stamp Ledger",
-        "Cleared Official Clearances & Approvals",
-        "Real-Time Case Tracking & WhatsApp Status Updates"
-      ],
-      prerequisites: [
-        "Original documents requiring clearance",
-        "Company Establishment Card (for corporate files)",
-        "Power of Attorney / PRO Representation Authorization"
-      ],
-      timeline: "24 - 48 Hours based on target ministry",
-      governmentAuthority: "All UAE Federal Ministries & Municipalities"
-    }
-  },
-  {
-    id: "amer-tasheel-tadbeer",
-    title: "Amer, Tasheel, Tadbeer",
-    category: "gov",
-    categoryLabel: "Govt Approvals & PRO",
-    badge: "Govt Authorized",
+    badge: "Govt Authorized PRO",
     badgeType: "vip",
     image: "/images/services/amer-tasheel-tadbeer.jpg",
-    shortDesc: "Official typing center and government transaction processing for GDRFA residency visas (Amer), MOHRE labor contracts (Tasheel), and domestic worker sponsorship (Tadbeer).",
-    price: "Express Lane",
+    shortDesc: "Official typing center and corporate PRO services for GDRFA visas (Amer), MOHRE labor contracts (Tasheel), domestic worker sponsorship (Tadbeer), and ministerial document clearing.",
+    price: "Express Lane & PRO",
     featured: true,
     icon: "Landmark",
     features: [
       "Amer: Entry Permits, Visa Stamping & Cancellations",
-      "Tasheel: MOHRE Labor Contracts & Quota Allocation",
-      "Tadbeer: Housemaid, Driver & Nanny Sponsorship",
-      "Zero Queueing & Fast-Track Electronic Clearance"
+      "Tasheel & Tadbeer: MOHRE Labor Contracts & Maid Sponsorship",
+      "Documents Clearing: Full Federal Ministry Submissions",
+      "Fine Waivers, Status Regularization & 24/7 PRO Support"
     ],
     details: {
-      overview: "As an authorized partner center, Hala Business Service processes all labor, immigration, and domestic sponsorship transactions with direct API integrations.",
+      overview: "One-stop authorized government hub and corporate PRO solution. Hala Business Service processes GDRFA residency visas (Amer), MOHRE labor contracts (Tasheel), domestic staff sponsorship (Tadbeer), and comprehensive document clearing across all UAE ministries and municipal authorities with zero delays.",
       deliverables: [
-        "Approved Entry Permits & Residence Stamping",
-        "MOHRE Electronic Work Permits & Labor Cards",
+        "Approved Entry Permits, Residence Stamping & Status Changes",
+        "MOHRE Electronic Work Permits, Labor Cards & Quota Allocations",
         "Tadbeer Domestic Worker Contracts & Medical Insurance",
-        "Visa Cancellation & Status Change Vouchers"
+        "Official Government Ministry Clearances & Fine Waivers",
+        "Dedicated Corporate PRO Account Officer & WhatsApp Case Tracking"
       ],
       prerequisites: [
-        "Sponsor Emirates ID and salary certificate / trade license",
-        "Applicant passport, photo & attested certificates",
-        "Tenancy contract (Ejari) for family / domestic sponsorship"
+        "Sponsor Emirates ID and salary certificate / Trade License copy",
+        "Original documents requiring ministerial clearance",
+        "Applicant passport copy, digital photo & attested certificates",
+        "Tenancy contract (Ejari) for family or domestic staff sponsorship"
       ],
-      timeline: "2 - 4 Hours for Entry Permits | 24 - 48 Hours for Visa Stamping",
-      governmentAuthority: "GDRFA Dubai (Amer), MOHRE (Tasheel), Tadbeer Centers"
-    }
-  },
-  {
-    id: "visa-immigration",
-    title: "Visa Immigration",
-    category: "visa",
-    categoryLabel: "Visa & Immigration",
-    badge: "2 & 3 Year Visas",
-    badgeType: "primary",
-    image: "/images/services/visa-immigration.jpg",
-    shortDesc: "Complete investor visa, partner visa, and corporate employee visa clearance including quota approvals, medical fitness typing, and biometric stamping.",
-    price: "3 - 5 Days Completion",
-    featured: false,
-    icon: "FileBadge",
-    features: [
-      "Investor & Partner 2-Year Residence Visas",
-      "Corporate Employee Employment Visas & Labor Quota",
-      "In-Country Status Change (Without Exiting UAE)",
-      "VIP Express Medical & Biometrics Assistance"
-    ],
-    details: {
-      overview: "We manage the entire visa lifecycle for company shareholders, executives, and staff with zero delays and complete legal compliance.",
-      deliverables: [
-        "e-Visa / Entry Permit",
-        "In-Country Status Change Approval",
-        "VIP Medical Fitness Certificate",
-        "Emirates ID Biometric Stamping & Plastic Card Delivery"
-      ],
-      prerequisites: [
-        "Company Trade License & Establishment Card",
-        "Applicant Passport Copy & White Background Digital Photo",
-        "Attested Educational Degree (for Managerial / Skilled titles)",
-        "Current UAE tourist or cancelled visa copy"
-      ],
-      timeline: "3 - 5 Working Days (Express 48h Available)",
-      governmentAuthority: "GDRFA Dubai & Federal Authority for Identity (ICP)"
+      timeline: "2 - 4 Hours for Typing | 24 - 48 Hours for Document Clearances",
+      governmentAuthority: "GDRFA Dubai (Amer), MOHRE (Tasheel), Tadbeer Centers & UAE Federal Ministries"
     }
   },
   {
@@ -355,74 +462,6 @@ export const servicesData = [
     }
   },
   {
-    id: "ded-services",
-    title: "Dubai Economic Department",
-    category: "business",
-    categoryLabel: "Company Setup & Licenses",
-    badge: "Mainland DED",
-    badgeType: "primary",
-    image: "/images/services/ded-services.jpg",
-    shortDesc: "Direct liaison with DED / DET for trade name reservation, initial approvals, MOA amendments, commercial permits, branch setups, and license freezing.",
-    price: "Direct DED Sync",
-    featured: false,
-    icon: "Scale",
-    features: [
-      "Trade Name Reservation & Initial Approvals",
-      "Instant DED License Issuance (No Office Year 1)",
-      "License Freezing, Liquidation & Partner Exits",
-      "Commercial Activity Expansion & Branch Openings"
-    ],
-    details: {
-      overview: "We interface directly with the Dubai Department of Economy and Tourism (DET) portal to handle all statutory modifications and legal filings.",
-      deliverables: [
-        "Official DET Trade Name Certificate",
-        "Initial Approval Certificate",
-        "Amended Commercial License & Partners Registry"
-      ],
-      prerequisites: [
-        "Existing Trade License & MOA",
-        "Passport / Emirates ID of shareholders",
-        "Board Resolution / Power of Attorney"
-      ],
-      timeline: "24 - 48 Hours",
-      governmentAuthority: "Dubai Department of Economy & Tourism (DET)"
-    }
-  },
-  {
-    id: "notary-services",
-    title: "Notary Services",
-    category: "corporate",
-    categoryLabel: "Corporate & Legal",
-    badge: "Dubai Courts MOJ",
-    badgeType: "primary",
-    image: "/images/services/notary-services.jpg",
-    shortDesc: "Legal drafting, Memorandum of Association (MOA), Power of Attorney (POA), Board Resolutions, and electronic Notary Public signing before Dubai Courts.",
-    price: "Bilingual AR/EN",
-    featured: false,
-    icon: "FileText",
-    features: [
-      "MOA & Local Service Agent Legal Drafting",
-      "General & Special Power of Attorney (POA)",
-      "Dubai Courts Online Electronic Notary Public Attestation",
-      "Share Sale Agreements & Board Resolutions"
-    ],
-    details: {
-      overview: "Execute legally binding corporate contracts with Dubai Courts accredited legal translators and electronic notary authentication.",
-      deliverables: [
-        "Notarized Bilingual MOA / POA Certificate",
-        "Dubai Courts Electronic Stamp & Verification QR Code",
-        "Digital PDF & Attested Physical Copies"
-      ],
-      prerequisites: [
-        "Original Emirates ID & Passport of signatories",
-        "Company Trade License copy",
-        "Draft agreement in Arabic & English"
-      ],
-      timeline: "Same Day (1 - 3 Hours via Online Notary)",
-      governmentAuthority: "Dubai Courts & Ministry of Justice (MOJ)"
-    }
-  },
-  {
     id: "emirates-id-medical",
     title: "Emirates ID / Medical",
     category: "visa",
@@ -454,74 +493,6 @@ export const servicesData = [
       ],
       timeline: "Medical: 2 - 4 Hours | Emirates ID delivery: 2 - 3 Days",
       governmentAuthority: "Dubai Health Authority (DHA) & Federal Authority (ICP)"
-    }
-  },
-  {
-    id: "ejari-services",
-    title: "Ejari Services",
-    category: "corporate",
-    categoryLabel: "Corporate & Legal",
-    badge: "Land Dept (DLD)",
-    badgeType: "primary",
-    image: "/images/services/ejari-services.jpg",
-    shortDesc: "Official Dubai Land Department (DLD) Ejari registration, commercial tenancy lease registration, tenancy renewals, and Ejari cancellation certificates.",
-    price: "1 - 2 Hours Turnaround",
-    featured: false,
-    icon: "Home",
-    features: [
-      "Official Ejari Tenancy Registration & Certificate",
-      "Commercial Office, Retail & Warehouse Ejari",
-      "Ejari Cancellation & Transfer for Moving Offices",
-      "Direct Sync with DED for Trade License Renewal"
-    ],
-    details: {
-      overview: "Ejari is mandatory for every physical and commercial lease in Dubai. We process your contract through the official DLD portal within 2 hours.",
-      deliverables: [
-        "Official DLD Ejari Tenancy Certificate",
-        "Registered Tenancy Contract Attestation",
-        "Unique Ejari Number for DEWA and DED Linking"
-      ],
-      prerequisites: [
-        "Signed Unified Tenancy Contract",
-        "Landlord & Tenant Passport/Emirates ID/Trade License",
-        "Title Deed copy of the property",
-        "Premise DEWA Premise Number"
-      ],
-      timeline: "1 - 2 Hours",
-      governmentAuthority: "Dubai Land Department (DLD) & Real Estate Regulatory Agency (RERA)"
-    }
-  },
-  {
-    id: "certificate-attestation",
-    title: "Certificate Attestation",
-    category: "gov",
-    categoryLabel: "Govt Approvals & PRO",
-    badge: "MOFA & Embassy",
-    badgeType: "primary",
-    image: "/images/services/certificate-attestation.jpg",
-    shortDesc: "International document legalization including MOFA (Ministry of Foreign Affairs), UAE Embassy, Apostille, educational degrees, birth and marriage certificates.",
-    price: "Worldwide Service",
-    featured: false,
-    icon: "Stamp",
-    features: [
-      "Ministry of Foreign Affairs (MOFA) UAE Attestation",
-      "Embassy & Consulate Legalization in Country of Origin",
-      "Educational Degrees, Diplomas, Transcripts Legalization",
-      "Birth, Marriage, Police Clearance & Commercial Power of Attorney"
-    ],
-    details: {
-      overview: "Legalize your foreign documents for official use in the UAE. We manage home country notarization, state ministry authentication, UAE Embassy stamping, and MOFA UAE attestation.",
-      deliverables: [
-        "Original Document with Official MOFA & Embassy Stamps",
-        "Certified Arabic Legal Translation (Ministry of Justice)",
-        "Secure Door-to-Door Courier Delivery"
-      ],
-      prerequisites: [
-        "Original physical document",
-        "Passport copy of document owner"
-      ],
-      timeline: "Express MOFA UAE: 24h | International Embassy: 5 - 10 Days",
-      governmentAuthority: "Ministry of Foreign Affairs (MOFA) UAE & Global Embassies"
     }
   }
 ];

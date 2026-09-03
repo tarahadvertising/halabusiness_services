@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {
   Crown, Building2, RefreshCw, Laptop, FileCheck, Landmark,
   FileBadge, Users, ShieldCheck, Award, Scale, FileText,
-  IdCard, Home, Stamp, ArrowRight, CheckCircle2, Search, MessageSquare
+  IdCard, Home, Stamp, ArrowRight, CheckCircle2, Search, MessageSquare,
+  Receipt, BadgeCheck, Calculator
 } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 
@@ -21,30 +22,49 @@ const iconMap = {
   FileText,
   IdCard,
   Home,
-  Stamp
+  Stamp,
+  Receipt,
+  BadgeCheck,
+  Calculator
 };
 
-export default function ServicesSection({ selectedCategory, setSelectedCategory, onSelectService }) {
-  const displayServices = selectedCategory && selectedCategory !== 'all'
+export default function ServicesSection({
+  selectedCategory,
+  setSelectedCategory,
+  onSelectService,
+  isHome = false,
+  limit = null,
+  onNavigate
+}) {
+  let displayServices = selectedCategory && selectedCategory !== 'all'
     ? servicesData.filter((s) => s.category === selectedCategory)
     : servicesData;
 
+  if (limit) {
+    displayServices = displayServices.slice(0, limit);
+  }
+
   const handleWhatsAppInquiry = (service) => {
-    const text = `*Service Inquiry - Hala Business Service*%0A%0A*Service:* ${service.title}%0A*Category:* ${service.categoryLabel}%0A*Price Estimate:* ${service.price}%0A%0APlease provide full details on documents required and processing timeline.`;
-    window.open(`https://wa.me/971551272700?text=${text}`, '_blank');
+    const text = `*Service Inquiry - Hala Business Service*%0A%0A*Service:* ${service.title}%0A*Category:* ${service.categoryLabel}%0A%0APlease provide full details on documents required and processing timeline.`;
+    window.open(`https://wa.me/971554408208?text=${text}`, '_blank');
   };
 
   return (
-    <section className="py-20 bg-slate-50" id="services">
+    <section className="py-20 bg-hala-blue/10 border-y border-hala-blue/15" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 bg-white/90 border border-hala-blue/20 text-hala-blue px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider mb-3 shadow-xs">
+            <span>{isHome ? "Premier Corporate Solutions" : "Complete Service Catalog"}</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-hala-darker tracking-tight mb-4">
-            Our 15 Specialized Business &amp; Government Solutions
+            {isHome ? "Our Core Business & Government Services" : "Our Specialized Business & Government Solutions"}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            From mainland company formation and 10-year Golden Visas to Amer/Tasheel typing, Ejari leasing, and court clearances across Dubai.
+            {isHome
+              ? "From mainland company formation and fast-track residency visas to attestation, VAT compliance, and trademark registration across Dubai."
+              : "From mainland company formation, VAT & tax filing, and trademark protection to 10-year Golden Visas, Amer/Tasheel typing, and certificate attestation across Dubai."}
           </p>
         </div>
 
@@ -121,26 +141,15 @@ export default function ServicesSection({ selectedCategory, setSelectedCategory,
                     </ul>
                   </div>
 
-                  {/* Card Footer: Pricing + Actions */}
-                  <div className="pt-4 border-t border-slate-100 mt-auto space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                          Pricing Estimate
-                        </span>
-                        <span className="text-sm font-extrabold text-hala-blue">
-                          {service.price}
-                        </span>
-                      </div>
-
-                      <button
-                        onClick={() => onSelectService(service)}
-                        className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-hala-blue bg-hala-subtle hover:bg-hala-blue hover:text-white px-3.5 py-1.5 rounded-full transition-colors"
-                      >
-                        <span>Full Scope</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
+                  {/* Card Footer: Actions */}
+                  <div className="pt-4 border-t border-slate-100 mt-auto space-y-2.5">
+                    <button
+                      onClick={() => onSelectService(service)}
+                      className="w-full text-center text-xs sm:text-sm font-bold text-hala-blue bg-hala-subtle hover:bg-hala-blue hover:text-white py-2.5 rounded-xl transition-colors flex items-center justify-center gap-1.5"
+                    >
+                      <span>View Full Scope</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
 
                     {/* Quick WhatsApp Quote Action */}
                     <button
@@ -157,6 +166,19 @@ export default function ServicesSection({ selectedCategory, setSelectedCategory,
             );
           })}
         </div>
+
+        {/* If on Home page / limited view, display 'Show More Services' Button */}
+        {isHome && (
+          <div className="text-center mt-14 pt-4">
+            <button
+              onClick={() => onNavigate && onNavigate('services', 'all')}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-hala-deep to-hala-blue hover:from-hala-darker hover:to-hala-deep text-white font-extrabold text-sm sm:text-base px-9 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group"
+            >
+              <span>Show More Services (Explore All Solutions)</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        )}
 
       </div>
     </section>

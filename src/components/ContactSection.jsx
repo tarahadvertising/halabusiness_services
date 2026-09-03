@@ -19,7 +19,7 @@ export default function ContactSection({ showToast }) {
     }
 
     setTimeout(() => {
-      window.open(`https://wa.me/971551272700?text=${msg}`, '_blank');
+      window.open(`https://wa.me/971554408208?text=${msg}`, '_blank');
     }, 800);
   };
 
@@ -55,19 +55,7 @@ export default function ContactSection({ showToast }) {
                   </div>
                   <div>
                     <h5 className="text-[11px] font-extrabold uppercase tracking-wider text-slate-300">Office Location</h5>
-                    <p className="text-sm font-semibold text-white">Office 217, Mozna Building, Al Nahda, Dubai, UAE</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-11 h-11 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center flex-shrink-0 text-white shadow-sm">
-                    <Phone className="w-5 h-5 text-hala-light" />
-                  </div>
-                  <div>
-                    <h5 className="text-[11px] font-extrabold uppercase tracking-wider text-slate-300">Landline &amp; Telephone</h5>
-                    <a href="tel:+97142230028" className="text-sm font-semibold text-white hover:text-emerald-300 transition-colors">
-                      +971 4 223 0028
-                    </a>
+                    <p className="text-sm font-semibold text-white">Al Khail Mall, Latifa Bint Hamdan St - Al Qouz Fourth - Al Quoz - Dubai</p>
                   </div>
                 </div>
 
@@ -76,14 +64,14 @@ export default function ContactSection({ showToast }) {
                     <MessageSquare className="w-5 h-5 text-whatsapp" />
                   </div>
                   <div>
-                    <h5 className="text-[11px] font-extrabold uppercase tracking-wider text-slate-300">WhatsApp Instant Desk</h5>
+                    <h5 className="text-[11px] font-extrabold uppercase tracking-wider text-slate-300">Phone &amp; WhatsApp Desk</h5>
                     <a
-                      href="https://wa.me/971551272700?text=Hello%20Hala%20Business%20Service,%20I%20would%20like%20a%20consultation"
+                      href="https://wa.me/971554408208?text=Hello%20Hala%20Business%20Service,%20I%20would%20like%20a%20consultation"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-semibold text-white hover:text-emerald-300 transition-colors"
+                      className="text-sm font-semibold text-white hover:text-emerald-300 transition-colors block"
                     >
-                      +971 55 127 2700
+                      +97155 4408208
                     </a>
                   </div>
                 </div>
@@ -173,7 +161,7 @@ export default function ContactSection({ showToast }) {
                         <option value="10-Year Golden Visa VIP Program">10-Year Golden Visa VIP Program</option>
                         <option value="Trade License Renewal">Trade License Renewal</option>
                         <option value="Virtual Office & Ejari Tenancy">Virtual Office &amp; Ejari Tenancy</option>
-                        <option value="Amer, Tasheel & Tadbeer Visa Typing">Amer, Tasheel &amp; Tadbeer Visa Typing</option>
+                        <option value="Amer, Tasheel, Tadbeer & Documents Clearing">Amer, Tasheel, Tadbeer &amp; Documents Clearing</option>
                         <option value="Emirates ID & VIP Medical Fitness">Emirates ID &amp; VIP Medical Fitness</option>
                         <option value="Document Attestation & Notary">Document Attestation &amp; Notary</option>
                       </select>

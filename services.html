@@ -107,7 +107,7 @@
   <section class="services-section section-padding" id="services">
     <div class="container">
       <div class="service-filter-bar">
-        <button class="filter-btn active" data-filter="all">All 15 Services</button>
+        <button class="filter-btn active" data-filter="all">All Services</button>
         <button class="filter-btn" data-filter="visa">Visa & Immigration</button>
         <button class="filter-btn" data-filter="business">Company Setup & Licenses</button>
         <button class="filter-btn" data-filter="gov">Govt Approvals & PRO</button>
@@ -116,35 +116,13 @@
 
       <div class="services-grid" id="servicesGrid">
 
-        <!-- 1. Golden Visa 10 Year -->
-        <div class="service-card featured-card" data-category="visa">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-crown"></i></div>
-            <span class="service-badge badge-vip">VIP Fast-Track</span>
-          </div>
-          <h3 class="service-title">Golden Visa 10 Year</h3>
-          <p class="service-desc">Long-term UAE residency for real estate investors (AED 2M+), entrepreneurs, top executives, doctors, engineers, scientists, and outstanding talents.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> 10-Year Self-Sponsored Residency</li>
-            <li><i class="fa-solid fa-check-circle"></i> Sponsor Family & Unlimited Domestic Staff</li>
-            <li><i class="fa-solid fa-check-circle"></i> Complete End-to-End VIP Nomination</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Eligibility</span>
-              <span class="service-price-val">Free Check</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('golden-visa')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 2. Company Formation -->
-        <div class="service-card" data-category="business">
+        <!-- 1. Business Setup -->
+        <div class="service-card featured-card" data-category="business">
           <div class="service-top-meta">
             <div class="service-icon-box"><i class="fa-solid fa-building"></i></div>
             <span class="service-badge badge-fast">100% Ownership</span>
           </div>
-          <h3 class="service-title">Company Formation</h3>
+          <h3 class="service-title">Business Setup</h3>
           <p class="service-desc">Establish Mainland LLC, Free Zone, or Offshore entities in Dubai and across UAE with 100% expat ownership and rapid license issuance.</p>
           <ul class="service-features-list">
             <li><i class="fa-solid fa-check-circle"></i> Mainland (DED) & 50+ Free Zones</li>
@@ -160,101 +138,13 @@
           </div>
         </div>
 
-        <!-- 3. Trade Licence Renewal -->
-        <div class="service-card" data-category="business">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
-            <span class="service-badge">24h Express</span>
-          </div>
-          <h3 class="service-title">Trade Licence Renewal</h3>
-          <p class="service-desc">Seamless annual trade license renewals, partner amendments, activity additions, and DED/Freezone compliance management without disruptions.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Fast 24-Hour Express Renewal</li>
-            <li><i class="fa-solid fa-check-circle"></i> Ejari Verification & Fee Reductions</li>
-            <li><i class="fa-solid fa-check-circle"></i> Partner / Shareholder Amendments</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Turnaround</span>
-              <span class="service-price-val">Same Day</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('trade-license-renewal')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 4. Virtual Office Space -->
-        <div class="service-card" data-category="corporate">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-            <span class="service-badge">DED Approved</span>
-          </div>
-          <h3 class="service-title">Virtual Office Space</h3>
-          <p class="service-desc">Cost-effective registered office addresses, flexi-desks, and shared office leases in prime Dubai business districts with instant Ejari for trade licensing.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Prime Dubai Business Addresses</li>
-            <li><i class="fa-solid fa-check-circle"></i> Instant Ejari Certificate Included</li>
-            <li><i class="fa-solid fa-check-circle"></i> Mail Handling & Meeting Room Access</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Starting From</span>
-              <span class="service-price-val">AED 4,500/yr</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('virtual-office')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 5. Documents Clearing -->
-        <div class="service-card" data-category="gov">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-file-shield"></i></div>
-            <span class="service-badge">Hassle-Free</span>
-          </div>
-          <h3 class="service-title">Documents Clearing</h3>
-          <p class="service-desc">Professional corporate PRO services liaising with all federal ministries, departments, immigration gates, and municipal registries in the UAE.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Dedicated PRO Account Representative</li>
-            <li><i class="fa-solid fa-check-circle"></i> Rapid Document Submission & Tracking</li>
-            <li><i class="fa-solid fa-check-circle"></i> Penalty Waivers & Status Regularization</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Support</span>
-              <span class="service-price-val">24/7 PRO</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('documents-clearing')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 6. Amer, Tasheel, Tadbeer -->
-        <div class="service-card featured-card" data-category="gov">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-landmark-dome"></i></div>
-            <span class="service-badge badge-vip">Govt Authorized</span>
-          </div>
-          <h3 class="service-title">Amer, Tasheel, Tadbeer</h3>
-          <p class="service-desc">Official typing center and government transaction processing for GDRFA residency visas (Amer), MOHRE labor contracts (Tasheel), and domestic worker sponsorship (Tadbeer).</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Amer: Entry Permits & Residency Stamping</li>
-            <li><i class="fa-solid fa-check-circle"></i> Tasheel: Work Permits & Quota Allocation</li>
-            <li><i class="fa-solid fa-check-circle"></i> Tadbeer: Maid, Driver & Nanny Sponsorship</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Processing</span>
-              <span class="service-price-val">Express Lane</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('amer-tasheel-tadbeer')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 7. Visa Immigration -->
+        <!-- 2. Visa Services -->
         <div class="service-card" data-category="visa">
           <div class="service-top-meta">
             <div class="service-icon-box"><i class="fa-solid fa-passport"></i></div>
             <span class="service-badge">2 & 3 Year</span>
           </div>
-          <h3 class="service-title">Visa Immigration</h3>
+          <h3 class="service-title">Visa Services</h3>
           <p class="service-desc">Complete investor visa, partner visa, and corporate employee visa clearance including quota approvals, medical fitness typing, and biometric stamping.</p>
           <ul class="service-features-list">
             <li><i class="fa-solid fa-check-circle"></i> Investor & Partner Residence Visas</li>
@@ -270,95 +160,73 @@
           </div>
         </div>
 
-        <!-- 8. Family Visa -->
-        <div class="service-card" data-category="visa">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-people-roof"></i></div>
-            <span class="service-badge">Family First</span>
-          </div>
-          <h3 class="service-title">Family Visa</h3>
-          <p class="service-desc">Bring your loved ones to live in the UAE. Comprehensive sponsorship services for spouses, children, parents, and newborn baby visa registration.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Spouse & Children Sponsorship</li>
-            <li><i class="fa-solid fa-check-circle"></i> Parents 1-Year & Golden Visa Sponsor</li>
-            <li><i class="fa-solid fa-check-circle"></i> Marriage & Birth Certificate Stamping</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Assistance</span>
-              <span class="service-price-val">Full PRO</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('family-visa')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 9. Insurance -->
-        <div class="service-card" data-category="corporate">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-shield-heart"></i></div>
-            <span class="service-badge">DHA Approved</span>
-          </div>
-          <h3 class="service-title">Insurance</h3>
-          <p class="service-desc">Mandatory UAE health insurance packages (Basic Essential Benefit Plan & Comprehensive), corporate group medical coverage, and commercial business liability.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> DHA & MOHAP Compliant Health Plans</li>
-            <li><i class="fa-solid fa-check-circle"></i> Investor, Employee & Family Coverage</li>
-            <li><i class="fa-solid fa-check-circle"></i> Commercial Property & Public Liability</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Plans From</span>
-              <span class="service-price-val">AED 650/yr</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('insurance')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 10. Government Approval -->
+        <!-- 3. Attestation Services -->
         <div class="service-card" data-category="gov">
           <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-certificate"></i></div>
-            <span class="service-badge">Multi-Agency</span>
+            <div class="service-icon-box"><i class="fa-solid fa-stamp"></i></div>
+            <span class="service-badge">MOFA & Embassy</span>
           </div>
-          <h3 class="service-title">Government Approval</h3>
-          <p class="service-desc">Specialized external approvals and NOCs from Dubai Municipality, RTA, Dubai Civil Defense, KHDA, Central Bank, and SIRA for restricted activities.</p>
+          <h3 class="service-title">Attestation Services</h3>
+          <p class="service-desc">International document legalization including MOFA (Ministry of Foreign Affairs), UAE Embassy, Apostille, educational degrees, birth and marriage certificates.</p>
           <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Dubai Municipality & Civil Defense</li>
-            <li><i class="fa-solid fa-check-circle"></i> RTA, KHDA, SIRA & DHA Clearances</li>
-            <li><i class="fa-solid fa-check-circle"></i> Activity Classification & Approvals</li>
+            <li><i class="fa-solid fa-check-circle"></i> MOFA UAE Official Attestation</li>
+            <li><i class="fa-solid fa-check-circle"></i> Home Country & Embassy Legalization</li>
+            <li><i class="fa-solid fa-check-circle"></i> Educational, Commercial & Personal Docs</li>
           </ul>
           <div class="service-footer">
             <div class="service-price-tag">
-              <span class="service-price-label">Approvals</span>
-              <span class="service-price-val">Guaranteed</span>
+              <span class="service-price-label">Service</span>
+              <span class="service-price-val">Worldwide</span>
             </div>
-            <button class="service-btn" onclick="openServiceModal('government-approval')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="service-btn" onclick="openServiceModal('certificate-attestation')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
-        <!-- 11. Dubai Economic Department -->
-        <div class="service-card" data-category="business">
+        <!-- 4. VAT Services -->
+        <div class="service-card featured-card" data-category="corporate">
           <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
-            <span class="service-badge badge-fast">Mainland DED</span>
+            <div class="service-icon-box"><i class="fa-solid fa-receipt"></i></div>
+            <span class="service-badge badge-fast">FTA Registered</span>
           </div>
-          <h3 class="service-title">Dubai Economic Department</h3>
-          <p class="service-desc">Direct liaison with DED / DET for trade name reservation, initial approvals, MOA amendments, commercial permits, branch setups, and license cancellations.</p>
+          <h3 class="service-title">VAT Services</h3>
+          <p class="service-desc">End-to-end UAE VAT registration, quarterly VAT return filing, deregistration, FTA audit compliance, voluntary disclosures, and Corporate Tax filing.</p>
           <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Trade Name Reservation & Initial Approval</li>
-            <li><i class="fa-solid fa-check-circle"></i> Instant License Issuance (No Ejari Year 1)</li>
-            <li><i class="fa-solid fa-check-circle"></i> License Freezing, Renewal & Liquidation</li>
+            <li><i class="fa-solid fa-check-circle"></i> Federal Tax Authority (FTA) TRN Issuance</li>
+            <li><i class="fa-solid fa-check-circle"></i> Quarterly VAT Return (Form 201) Filing</li>
+            <li><i class="fa-solid fa-check-circle"></i> Corporate Tax (9%) Registration & Advisory</li>
           </ul>
           <div class="service-footer">
             <div class="service-price-tag">
-              <span class="service-price-label">DED Partner</span>
-              <span class="service-price-val">Direct Sync</span>
+              <span class="service-price-label">Starting From</span>
+              <span class="service-price-val">AED 500</span>
             </div>
-            <button class="service-btn" onclick="openServiceModal('ded-services')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="service-btn" onclick="openServiceModal('vat-services')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
-        <!-- 12. Notary Services -->
+        <!-- 5. Trademark & ISO Registration Services -->
+        <div class="service-card featured-card" data-category="corporate">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-certificate"></i></div>
+            <span class="service-badge badge-vip">MOE & ISO Certified</span>
+          </div>
+          <h3 class="service-title">Trademark & ISO Registration Services</h3>
+          <p class="service-desc">Complete 4-stage brand registration: Trademark Search, Application Filing, Ministry Examination, and Gazette Publication.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> 1. Trademark Search & Conflict Check</li>
+            <li><i class="fa-solid fa-check-circle"></i> 2. Application Filing & Examination</li>
+            <li><i class="fa-solid fa-check-circle"></i> 3. Gazette Publication & 10-Yr Certificate</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Protection</span>
+              <span class="service-price-val">UAE & GCC</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('trademark-iso-registration')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 6. Notary Services -->
         <div class="service-card" data-category="corporate">
           <div class="service-top-meta">
             <div class="service-icon-box"><i class="fa-solid fa-feather-pointed"></i></div>
@@ -380,7 +248,163 @@
           </div>
         </div>
 
-        <!-- 13. Emirates ID / Medical -->
+        <!-- 7. Golden Visa 10 Year -->
+        <div class="service-card" data-category="visa">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-crown"></i></div>
+            <span class="service-badge badge-vip">VIP Fast-Track</span>
+          </div>
+          <h3 class="service-title">Golden Visa 10 Year</h3>
+          <p class="service-desc">Long-term UAE residency for real estate investors (AED 2M+), entrepreneurs, top executives, doctors, engineers, scientists, and outstanding talents.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> 10-Year Self-Sponsored Residency</li>
+            <li><i class="fa-solid fa-check-circle"></i> Sponsor Family & Unlimited Domestic Staff</li>
+            <li><i class="fa-solid fa-check-circle"></i> Complete End-to-End VIP Nomination</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Eligibility</span>
+              <span class="service-price-val">Free Check</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('golden-visa')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 7. Trade Licence Renewal -->
+        <div class="service-card" data-category="business">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
+            <span class="service-badge">24h Express</span>
+          </div>
+          <h3 class="service-title">Trade Licence Renewal</h3>
+          <p class="service-desc">Seamless annual trade license renewals, partner amendments, activity additions, and DED/Freezone compliance management without disruptions.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> Fast 24-Hour Express Renewal</li>
+            <li><i class="fa-solid fa-check-circle"></i> Ejari Verification & Fee Reductions</li>
+            <li><i class="fa-solid fa-check-circle"></i> Partner / Shareholder Amendments</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Turnaround</span>
+              <span class="service-price-val">Same Day</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('trade-license-renewal')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 8. Virtual Office & Ejari Services -->
+        <div class="service-card" data-category="corporate">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <span class="service-badge badge-fast">DED & DLD Approved</span>
+          </div>
+          <h3 class="service-title">Virtual Office & Ejari Services</h3>
+          <p class="service-desc">DED-approved registered business addresses, flexi-desks, and instant Dubai Land Department (DLD) Ejari tenancy certificates for licensing and family visas.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> Official Dubai Land Dept (DLD) Ejari</li>
+            <li><i class="fa-solid fa-check-circle"></i> Prime Dubai Registered Office Addresses</li>
+            <li><i class="fa-solid fa-check-circle"></i> Commercial & Residential Tenancy Ejari</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Registration</span>
+              <span class="service-price-val">Instant Sync</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('virtual-office')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 9. Amer, Tasheel, Tadbeer & Documents Clearing -->
+        <div class="service-card featured-card" data-category="gov">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-landmark-dome"></i></div>
+            <span class="service-badge badge-vip">Govt Authorized PRO</span>
+          </div>
+          <h3 class="service-title">Amer, Tasheel, Tadbeer & Documents Clearing</h3>
+          <p class="service-desc">Official typing center and corporate PRO services for GDRFA visas (Amer), MOHRE labor contracts (Tasheel), domestic worker sponsorship (Tadbeer), and ministerial document clearing.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> Amer: Entry Permits & Residency Stamping</li>
+            <li><i class="fa-solid fa-check-circle"></i> Tasheel & Tadbeer: Work Permits & Maid Sponsorship</li>
+            <li><i class="fa-solid fa-check-circle"></i> Full Documents Clearing across All UAE Ministries</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Processing</span>
+              <span class="service-price-val">Express Lane & PRO</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('amer-tasheel-tadbeer')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 11. Family Visa -->
+        <div class="service-card" data-category="visa">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-people-roof"></i></div>
+            <span class="service-badge">Family First</span>
+          </div>
+          <h3 class="service-title">Family Visa</h3>
+          <p class="service-desc">Bring your loved ones to live in the UAE. Comprehensive sponsorship services for spouses, children, parents, and newborn baby visa registration.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> Spouse & Children Sponsorship</li>
+            <li><i class="fa-solid fa-check-circle"></i> Parents 1-Year & Golden Visa Sponsor</li>
+            <li><i class="fa-solid fa-check-circle"></i> Marriage & Birth Certificate Stamping</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Assistance</span>
+              <span class="service-price-val">Full PRO</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('family-visa')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 12. Insurance -->
+        <div class="service-card" data-category="corporate">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-shield-heart"></i></div>
+            <span class="service-badge">DHA Approved</span>
+          </div>
+          <h3 class="service-title">Insurance</h3>
+          <p class="service-desc">Mandatory UAE health insurance packages (Basic Essential Benefit Plan & Comprehensive), corporate group medical coverage, and commercial business liability.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> DHA & MOHAP Compliant Health Plans</li>
+            <li><i class="fa-solid fa-check-circle"></i> Investor, Employee & Family Coverage</li>
+            <li><i class="fa-solid fa-check-circle"></i> Commercial Property & Public Liability</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Plans From</span>
+              <span class="service-price-val">AED 650/yr</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('insurance')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 13. Government Approval -->
+        <div class="service-card" data-category="gov">
+          <div class="service-top-meta">
+            <div class="service-icon-box"><i class="fa-solid fa-certificate"></i></div>
+            <span class="service-badge">Multi-Agency</span>
+          </div>
+          <h3 class="service-title">Government Approval</h3>
+          <p class="service-desc">Specialized external approvals and NOCs from Dubai Municipality, RTA, Dubai Civil Defense, KHDA, Central Bank, and SIRA for restricted activities.</p>
+          <ul class="service-features-list">
+            <li><i class="fa-solid fa-check-circle"></i> Dubai Municipality & Civil Defense</li>
+            <li><i class="fa-solid fa-check-circle"></i> RTA, KHDA, SIRA & DHA Clearances</li>
+            <li><i class="fa-solid fa-check-circle"></i> Activity Classification & Approvals</li>
+          </ul>
+          <div class="service-footer">
+            <div class="service-price-tag">
+              <span class="service-price-label">Approvals</span>
+              <span class="service-price-val">Guaranteed</span>
+            </div>
+            <button class="service-btn" onclick="openServiceModal('government-approval')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+
+
+        <!-- 16. Emirates ID / Medical -->
         <div class="service-card featured-card" data-category="visa">
           <div class="service-top-meta">
             <div class="service-icon-box"><i class="fa-solid fa-address-card"></i></div>
@@ -399,50 +423,6 @@
               <span class="service-price-val">Express 2h</span>
             </div>
             <button class="service-btn" onclick="openServiceModal('emirates-id-medical')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 14. Ejari Services -->
-        <div class="service-card" data-category="corporate">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-house-chimney-crack"></i></div>
-            <span class="service-badge">Land Dept (DLD)</span>
-          </div>
-          <h3 class="service-title">Ejari Services</h3>
-          <p class="service-desc">Official Dubai Land Department (DLD) Ejari registration, commercial tenancy lease registration, tenancy renewals, and Ejari cancellation certificates.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> Official Ejari Tenancy Registration</li>
-            <li><i class="fa-solid fa-check-circle"></i> Commercial Office & Warehouse Ejari</li>
-            <li><i class="fa-solid fa-check-circle"></i> Instant Ejari Certificate Download</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Turnaround</span>
-              <span class="service-price-val">1 - 2 Hours</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('ejari-services')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <!-- 15. Certificate Attestation -->
-        <div class="service-card" data-category="gov">
-          <div class="service-top-meta">
-            <div class="service-icon-box"><i class="fa-solid fa-stamp"></i></div>
-            <span class="service-badge">MOFA & Embassy</span>
-          </div>
-          <h3 class="service-title">Certificate Attestation</h3>
-          <p class="service-desc">International document legalization including MOFA (Ministry of Foreign Affairs), UAE Embassy, Apostille, educational degrees, birth and marriage certificates.</p>
-          <ul class="service-features-list">
-            <li><i class="fa-solid fa-check-circle"></i> MOFA UAE Official Attestation</li>
-            <li><i class="fa-solid fa-check-circle"></i> Home Country & Embassy Legalization</li>
-            <li><i class="fa-solid fa-check-circle"></i> Educational, Commercial & Personal Docs</li>
-          </ul>
-          <div class="service-footer">
-            <div class="service-price-tag">
-              <span class="service-price-label">Service</span>
-              <span class="service-price-val">Worldwide</span>
-            </div>
-            <button class="service-btn" onclick="openServiceModal('certificate-attestation')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
@@ -473,9 +453,7 @@
             <a href="services.html">■ Golden Visa 10 year</a>
             <a href="services.html">■ Company Formation</a>
             <a href="services.html">■ Trade licence renewal</a>
-            <a href="services.html">■ Virtual office space</a>
-            <a href="services.html">■ Documents Clearing</a>
-            <a href="services.html">■ Amer, Tasheel, tadbeer</a>
+            <a href="services.html">■ Amer, Tasheel, Tadbeer & Documents Clearing</a>
             <a href="services.html">■ Visa immigration</a>
             <a href="services.html">■ Family visa</a>
           </div>
